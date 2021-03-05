@@ -16,7 +16,7 @@ func main() {
 	sigchan := make(chan os.Signal)
 	signal.Notify(sigchan, os.Interrupt, syscall.SIGTERM)
 	p, err := kafka.NewProducer(&kafka.ConfigMap{
-		"bootstrap.servers": "localhost:9092",
+		"bootstrap.servers": "localhost:9096",
 		"debug":             "broker,topic,msg",
 	})
 	if err != nil {
